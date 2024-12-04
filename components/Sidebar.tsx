@@ -3,7 +3,7 @@ import { Home, List, Briefcase } from "lucide-react";
 
 export const Sidebar = () => {
   return (
-      <nav className="w-72 pt-10 h-screen border-r pr-20">
+      <nav className="w-72 pt-10 h-screen border-r pr-20 hidden md:block">
         <SidebarLink href="/dashboard" icon={<Home size={20} />} label="Dashboard" />
         <SidebarLink href="/skill-test" icon={<List size={20} />} label="Skill Test" />
         <SidebarLink href="/internship" icon={<Briefcase size={20} />} label="Internship" />

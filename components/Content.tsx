@@ -31,7 +31,7 @@ export const Content = ({
     <>
       <div className="w-full">
         <h1 className="p-4">Skill Test</h1>
-        <div className="border rounded-md p-4 flex items-center space-x-4  bg-white">
+        <div className="border rounded-md p-4 flex sm:flex-row sm:gap-0 gap-10 flex-col sm:items-center space-x-4  bg-white">
           <img src={htmll.src} alt="HTML Logo" className="h-16 w-16" />
           <div className="flex-1">
             <h1 className="font-bold text-lg">Hyper Text Markup Language</h1>
@@ -126,7 +126,7 @@ export const QuickStatistics = ({ data }: { data: dataTypes }) => {
   return (
     <div className="border rounded-md w-full p-4 ">
       <h2 className="font-bold text-lg mb-4">Quick Statistics</h2>
-      <div className="flex justify-between items-center ">
+      <div className="flex justify-between sm:items-center sm:flex-row flex-col ">
         <div className="flex items-center space-x-4">
           <img src={trophy.src} className="h-20 w-14" />
           <div>
@@ -143,8 +143,8 @@ export const QuickStatistics = ({ data }: { data: dataTypes }) => {
           </div>
         </div>
 
-        <div className="flex items-center space-x-4">
-          <img src={tick.src} className="h-10 w-10" />
+        <div className="flex items-center space-x-4 ">
+          <img src={tick.src} className="h-10 w-10 " />
           <div>
             <h3 className="text-lg font-bold">{data.currentScore} / 15</h3>
             <p className="text-sm text-gray-600">CORRECT ANSWERS</p>

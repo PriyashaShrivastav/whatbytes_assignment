@@ -21,7 +21,7 @@ export default function Home() {
       <div className="flex ">
         <Sidebar />
 
-        <main className="pl-10 flex w-full gap-10 p-4">
+        <main className="pl-10 flex md:flex-row flex-col w-full gap-10 p-4">
           <div className="flex flex-col w-full">
             <Content data={data} setData={setData} />
             <div className=" pt-4">
@@ -34,7 +34,7 @@ export default function Home() {
 
           <div className="flex flex-col">
             <Analysis />         
-          <QuestionAnalysis percent={data.percentile} />
+          <QuestionAnalysis percent={data.percentile} currentScore={data.currentScore} />
           </div>
         </main>
       </div>

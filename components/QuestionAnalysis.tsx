@@ -4,9 +4,10 @@ import { PieSectorDataItem } from "recharts/types/polar/Pie";
 
 interface QuestionAnalysisProps {
   percent: number; 
+  currentScore: number
 }
 
-export const QuestionAnalysis: React.FC<QuestionAnalysisProps> = ({ percent }) => {
+export const QuestionAnalysis: React.FC<QuestionAnalysisProps> = ({ percent, currentScore }) => {
   
   const data = [
     { name: "Correct", value: percent },
@@ -51,11 +52,11 @@ export const QuestionAnalysis: React.FC<QuestionAnalysisProps> = ({ percent }) =
 
   return (
     <div className="rounded-md border mt-4 p-6 max-w-xl w-full">
-      <h2 className="flex justify-end min-w-4 font-extrabold text-[#8884d8]">10/15</h2>
+      <h2 className="flex justify-end min-w-4 font-extrabold text-[#8884d8]">{currentScore}/15</h2>
       <h2 className="text-lg font-bold mb-4">Question Analysis</h2>
       
       <p className="text-sm text-gray-600  mb-4">
-     <span className="font-bold">You answered 10 out of 15 questions correctly.</span> However it <br/>still needs improvement.
+     <span className="font-bold">You answered {currentScore} out of 15 questions correctly.</span> However it <br/>still needs improvement.
       </p>
 
       <div className="h-64">
